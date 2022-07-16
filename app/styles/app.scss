@@ -1,0 +1,40 @@
+@import 'reset';
+@import 'variables';
+@import 'utility';
+
+// Navbar
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #292524;
+  color: $text-white;
+
+  height: 80px;
+  padding: 0 3rem;
+
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    .links__link {
+      margin-left: 0.5rem;
+
+      &:hover {
+        color: darken($text-white, 10%);
+      }
+
+      .active {
+        border-bottom: 1px solid $text-white;
+      }
+    }
+  }
+}
