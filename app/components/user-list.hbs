@@ -1,0 +1,20 @@
+<ul class='userList'>
+  {{#each @users as |user|}}
+    <li class='userList__item'>
+      <img
+        class='item__img'
+        src={{user.avatar_url}}
+        alt='Avatar'
+        height='50'
+        width='50'
+      />
+      <p class='item__login'>{{user.login}}</p>
+      <a
+        href={{user.html_url}}
+        class='item__link'
+        target='_blank'
+        rel='noopener noreferrer'
+      >Profile</a>
+    </li>
+  {{/each}}
+</ul>

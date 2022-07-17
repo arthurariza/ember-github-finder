@@ -7,6 +7,10 @@ export default class NavbarComponent extends Component {
       name: 'Home',
     },
     {
+      route: 'users',
+      name: 'Users',
+    },
+    {
       route: 'about',
       name: 'About',
     },

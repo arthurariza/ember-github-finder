@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
 
-  background-color: #292524;
+  background-color: $bg-dark;
   color: $text-white;
 
   height: 80px;
@@ -35,6 +35,45 @@
       .active {
         border-bottom: 1px solid $text-white;
       }
+    }
+  }
+}
+
+// UserList
+.userList {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 125px);
+
+  margin-bottom: 3rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid $bg-dark;
+    padding: 1rem 0;
+
+    font-weight: bold;
+
+    .item__img {
+      border-radius: 50%;
+    }
+
+    .item__login {
+      font-size: 1.25rem;
+    }
+
+    .item__link {
+      background-color: $bg-dark;
+      color: $text-white;
+      padding: 0.25rem;
+    }
+
+    .item__link:hover {
+      background-color: lighten($bg-dark, 10%);
     }
   }
 }
