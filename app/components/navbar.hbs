@@ -1,9 +1,12 @@
-<nav class='navbar'>
-  <h1 class='navbar__title'>Github Finder</h1>
-  <ul class='navbar__links'>
+<nav class='navbar' data-test-navbar>
+  <h2 class='navbar__title' data-test-navbar-tittle>Github Finder</h2>
+  <ul class='navbar__links' data-test-navbar-links>
     {{#each this.navLinks as |link|}}
-      <li class='links__link'>
-        <LinkTo @route={{link.route}}>{{link.name}}</LinkTo>
+      <li class='links__link' data-test-navbar-links-list>
+        <LinkTo
+          @route={{link.route}}
+          data-test-link={{link.route}}
+        >{{link.name}}</LinkTo>
       </li>
     {{/each}}
   </ul>
