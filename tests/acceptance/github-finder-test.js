@@ -27,6 +27,17 @@ module('Acceptance | github finder', function (hooks) {
     assert.dom('h1').hasText('About');
   });
 
+  test('visiting /users', async function (assert) {
+    await visit('/users');
+
+    assert.strictEqual(currentURL(), '/users');
+
+    assert.dom('[data-test-navbar]').exists();
+    assert.dom('[data-test-navbar-tittle]').hasText('Github Finder');
+
+    assert.dom('h1').hasText('Users');
+  });
+
   test('navigating using the nav-bar', async function (assert) {
     await visit('/');
 
@@ -34,9 +45,13 @@ module('Acceptance | github finder', function (hooks) {
     assert.dom('[data-test-navbar-tittle]').hasText('Github Finder');
     assert.dom('[data-test-link="index"]').hasText('Home');
     assert.dom('[data-test-link="about"]').hasText('About');
+    assert.dom('[data-test-link="users"]').hasText('Users');
 
     await click('[data-test-link="about"]');
     assert.strictEqual(currentURL(), '/about');
+
+    await click('[data-test-link="users"]');
+    assert.strictEqual(currentURL(), '/users');
 
     await click('[data-test-link="index"]');
     assert.strictEqual(currentURL(), '/');

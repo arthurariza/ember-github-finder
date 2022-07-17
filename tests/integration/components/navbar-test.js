@@ -11,9 +11,10 @@ module('Integration | Component | navbar', function (hooks) {
 
     assert.dom('[data-test-navbar]').exists();
     assert.dom('[data-test-navbar-tittle]').hasText('Github Finder');
-    assert.dom('[data-test-navbar-links-list]').exists({ count: 2 });
+    assert.dom('[data-test-navbar-links-list]').exists({ count: 3 });
 
     assert.dom('[data-test-link="index"]').hasText('Home');
     assert.dom('[data-test-link="about"]').hasText('About');
+    assert.dom('[data-test-link="users"]').hasText('Users');
   });
 });

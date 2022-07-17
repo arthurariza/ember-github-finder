@@ -1,6 +1,6 @@
-<ul class='userList'>
+<ul class='userList' data-test-users-list>
   {{#each @users as |user|}}
-    <li class='userList__item'>
+    <li class='userList__item' data-test-users-list-item={{user.login}}>
       <img
         class='item__img'
         src={{user.avatar_url}}
